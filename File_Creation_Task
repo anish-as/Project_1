@@ -1,0 +1,96 @@
+ubuntu@ip-172-31-10-230:~$ mkdir my_folder
+ubuntu@ip-172-31-10-230:~$ cd my_folder
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Hi Its Me Anish" > my_file.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Hi Its Me Anish New file" > another_file.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ cat another_file.txt >> my_file.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ cat my_file.txt
+Hi Its Me Anish
+Hi Its Me Anish New file
+ubuntu@ip-172-31-10-230:~/my_folder$ 
+ubuntu@ip-172-31-10-230:~/my_folder$ ls -l
+total 8
+-rw-rw-r-- 1 ubuntu ubuntu 25 Apr 21 00:13 another_file.txt
+-rw-rw-r-- 1 ubuntu ubuntu 41 Apr 21 00:13 my_file.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ 
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File1." > file_1.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File2." > file_2.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File3." > file_3.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File4." > file_4.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File5." > file_5.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File6." > file_6.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File7." > file_7.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File8." > file_8.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File9." > file_9.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File10." > file_10.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File11." > file_11.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File12." > file_12.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File13." > file_13.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File14." > file_14.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File15." > file_15.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File16." > file_16.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File17." > file_17.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File18." > file_18.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File19." > file_19.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ echo "Anisih File20." > file_20.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ ls -l
+total 88
+-rw-rw-r-- 1 ubuntu ubuntu 25 Apr 21 00:13 another_file.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:18 file_1.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_10.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_11.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_12.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_13.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_14.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_15.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_16.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_17.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_18.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_19.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:18 file_2.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_20.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:18 file_3.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:19 file_4.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:19 file_5.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:19 file_6.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:19 file_7.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:19 file_8.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:20 file_9.txt
+-rw-rw-r-- 1 ubuntu ubuntu 41 Apr 21 00:13 my_file.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ mv "file_1.txt" "file_1.yml"
+ubuntu@ip-172-31-10-230:~/my_folder$ mv "file_2.txt" "file_2.yml"
+ubuntu@ip-172-31-10-230:~/my_folder$ mv "file_3.txt" "file_3.yml"
+ubuntu@ip-172-31-10-230:~/my_folder$ mv "file_4.txt" "file_4.yml"
+ubuntu@ip-172-31-10-230:~/my_folder$ mv "file_5.txt" "file_5.yml"
+ubuntu@ip-172-31-10-230:~/my_folder$ ls -l
+total 88
+-rw-rw-r-- 1 ubuntu ubuntu 25 Apr 21 00:13 another_file.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:18 file_1.yml
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_10.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_11.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_12.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_13.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_14.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_15.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_16.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_17.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_18.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_19.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:18 file_2.yml
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_20.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:18 file_3.yml
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:19 file_4.yml
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:19 file_5.yml
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:19 file_6.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:19 file_7.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:19 file_8.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Apr 21 00:20 file_9.txt
+-rw-rw-r-- 1 ubuntu ubuntu 41 Apr 21 00:13 my_file.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ ls -lt | head -n 5
+total 88
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_20.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_19.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_18.txt
+-rw-rw-r-- 1 ubuntu ubuntu 15 Apr 21 00:20 file_17.txt
+ubuntu@ip-172-31-10-230:~/my_folder$ 
+
+
