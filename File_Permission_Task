@@ -1,0 +1,57 @@
+ubuntu@ip-172-31-40-72:/$ ls
+bin  bin.usr-is-merged  boot  dev  etc  lib  lib.usr-is-merged  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  sbin.usr-is-merged  snap  srv  sys  tmp  usr  var
+ubuntu@ip-172-31-40-72:/$ cd home
+-bash: cd: home: No such file or directory
+ubuntu@ip-172-31-40-72:/$ mkdir home
+mkdir: cannot create directory ‘home’: Permission denied
+ubuntu@ip-172-31-40-72:/$ sudo mkdir /home
+ubuntu@ip-172-31-40-72:/$ ls -lrt
+total 76
+drwxr-xr-x   2 root root  4096 Feb 26  2024 bin.usr-is-merged
+drwxr-xr-x   2 root root  4096 Mar 31  2024 sbin.usr-is-merged
+drwxr-xr-x   2 root root  4096 Apr  8  2024 lib.usr-is-merged
+lrwxrwxrwx   1 root root     8 Apr 22  2024 sbin -> usr/sbin
+lrwxrwxrwx   1 root root     9 Apr 22  2024 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root     7 Apr 22  2024 lib -> usr/lib
+lrwxrwxrwx   1 root root     7 Apr 22  2024 bin -> usr/bin
+drwxr-xr-x   2 root root  4096 Mar  5 08:38 mnt
+drwxr-xr-x   2 root root  4096 Mar  5 08:38 srv
+drwxr-xr-x   2 root root  4096 Mar  5 08:38 opt
+drwxr-xr-x   2 root root  4096 Mar  5 08:38 media
+drwxr-xr-x  12 root root  4096 Mar  5 08:38 usr
+drwx------   2 root root 16384 Mar  5 08:40 lost+found
+drwxr-xr-x   6 root root  4096 Mar  5 08:43 snap
+drwxr-xr-x   5 root root  4096 Mar  5 08:44 boot
+dr-xr-xr-x 166 root root     0 Apr 23 00:02 proc
+dr-xr-xr-x  13 root root     0 Apr 23 00:02 sys
+drwxr-xr-x  13 root root  4096 Apr 23 00:02 var
+drwxr-xr-x 108 root root  4096 Apr 23 00:03 etc
+drwxr-xr-x  16 root root  3240 Apr 23 00:03 dev
+drwxrwxrwt  12 root root  4096 Apr 23 00:03 tmp
+drwx------   4 root root  4096 Apr 23 00:14 root
+drwxr-xr-x  26 root root   860 Apr 23 00:15 run
+drwxr-xr-x   2 root root  4096 Apr 23 00:16 home
+ubuntu@ip-172-31-40-72:/$ cd home
+ubuntu@ip-172-31-40-72:/home$ echo "Hi Its Me Anish" > demo.txt
+-bash: demo.txt: Permission denied
+ubuntu@ip-172-31-40-72:/home$ ls -lrt
+total 0
+ubuntu@ip-172-31-40-72:/home$ sudo chown ubuntu:ubuntu /home
+ubuntu@ip-172-31-40-72:/home$ ls -lrt
+total 0
+ubuntu@ip-172-31-40-72:/home$ echo "Hi Its Me Anish" > demo.txt
+ubuntu@ip-172-31-40-72:/home$ ls lrt
+ls: cannot access 'lrt': No such file or directory
+ubuntu@ip-172-31-40-72:/home$ ls -lrt
+total 4
+-rw-rw-r-- 1 ubuntu ubuntu 16 Apr 23 00:18 demo.txt
+ubuntu@ip-172-31-40-72:/home$ chmod 764 /home/demo.txt
+ubuntu@ip-172-31-40-72:/home$ ls -lrt
+total 4
+-rwxrw-r-- 1 ubuntu ubuntu 16 Apr 23 00:18 demo.txt
+ubuntu@ip-172-31-40-72:/home$ cd\
+> 
+-bash: cd: /home/ubuntu: No such file or directory
+ubuntu@ip-172-31-40-72:/home$ ls -l /home/demo.txt 
+-rwxrw-r-- 1 ubuntu ubuntu 16 Apr 23 00:18 /home/demo.txt
+ubuntu@ip-172-31-40-72:/home$ 
