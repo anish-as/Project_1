@@ -1,0 +1,94 @@
+ubuntu@ip-172-31-9-8:~$ dig guvi.in
+
+; <<>> DiG 9.18.30-0ubuntu0.24.04.2-Ubuntu <<>> guvi.in
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 39972
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;guvi.in.                       IN      A
+
+;; ANSWER SECTION:
+guvi.in.                161     IN      A       104.26.4.88
+guvi.in.                161     IN      A       172.67.70.207
+guvi.in.                161     IN      A       104.26.5.88
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+;; WHEN: Sat Apr 26 14:18:23 UTC 2025
+;; MSG SIZE  rcvd: 84
+
+ubuntu@ip-172-31-9-8:~$ ping guvi.in
+PING guvi.in (172.67.70.207) 56(84) bytes of data.
+64 bytes from 172.67.70.207: icmp_seq=1 ttl=54 time=0.969 ms
+64 bytes from 172.67.70.207: icmp_seq=2 ttl=54 time=1.49 ms
+64 bytes from 172.67.70.207: icmp_seq=3 ttl=54 time=0.829 ms
+^C
+--- guvi.in ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 0.829/1.096/1.491/0.284 ms
+ubuntu@ip-172-31-9-8:~$ top
+top - 14:19:01 up 12 min,  1 user,  load average: 0.00, 0.02, 0.00
+Tasks: 104 total,   1 running, 103 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni, 82.2 id,  0.0 wa,  0.0 hi,  0.0 si, 17.8 st 
+MiB Mem :    957.4 total,    423.0 free,    301.7 used,    386.0 buff/cache     
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    655.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                                                                    
+      1 root      20   0   22408  13556   9588 S   0.0   1.4   0:01.46 systemd                                                                                                                                    
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd                                                                                                                                   
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_release                                                                                                                     
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_g                                                                                                                            
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_p                                                                                                                            
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_                                                                                                                            
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns                                                                                                                            
+      8 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker/0:0-events                                                                                                                         
+      9 root      20   0       0      0      0 I   0.0   0.0   0:00.01 kworker/0:1-events                                                                                                                         
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                                                                                
+     11 root      20   0       0      0      0 I   0.0   0.0   0:00.07 kworker/u30:0-events_power_efficient                                                                                                       
+     12 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_pe                                                                                                                            
+     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                                                                     
+     14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                                                                    
+     15 root      20   0       0      0      0 S   0.0   0.0   0:00.04 ksoftirqd/0                                                                                                                                
+     16 root      20   0       0      0      0 I   0.0   0.0   0:00.11 rcu_sched                                                                                                                                  
+     17 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 migration/0                                                                                                                                
+     18 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                                                                                                              
+     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                                                                    
+     20 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                                                                                                  
+     21 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-inet_                                                                                                                            
+     22 root      20   0       0      0      0 I   0.0   0.0   0:00.01 kworker/u30:1-events_unbound                                                                                                               
+     23 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                                                                                                    
+     24 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                                                                                                                 
+     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                                                                                 
+     26 root      20   0       0      0      0 I   0.0   0.0   0:00.01 kworker/u30:2-iou_exit                                                                                                                     
+     27 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-write                                                                                                                            
+     28 root      20   0       0      0      0 S   0.0   0.0   0:00.02 kcompactd0                                                                                                                                 
+     29 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                                                                                                       
+     30 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                                                                                 
+     31 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kinte                                                                                                                            
+     32 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kbloc                                                                                                                            
+     33 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-blkcg                                                                                                                            
+     34 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/9-acpi 
+
+ubuntu@ip-172-31-9-8:~$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           957Mi       301Mi       423Mi       888Ki       386Mi       655Mi
+Swap:             0B          0B          0B
+ubuntu@ip-172-31-9-8:~$ ping 172.31.5.44
+PING 172.31.5.44 (172.31.5.44) 56(84) bytes of data.
+^C
+--- 172.31.5.44 ping statistics ---
+7 packets transmitted, 0 received, 100% packet loss, time 6123ms
+
+ubuntu@ip-172-31-9-8:~$ telnet 172.31.5.44 22
+Trying 172.31.5.44...
+Connected to 172.31.5.44.
+Escape character is '^]'.
+SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.8 
+
+ubuntu@ip-172-31-9-8:~$ telnet guvi.com 9000
+Trying 172.67.146.154...
+^C
