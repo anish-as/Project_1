@@ -41,7 +41,20 @@ ubuntu@ip-172-31-9-63:~$ chmod +x Script_2.sh
 
 #!/bin/bash
 
-awk 'NR<5 {print} NR>=5 {if ($0 ~ /welcome/) gsub(/give/, "learning"); print}' input.txt > tmp && mv tmp input.txt
+INPUT_FILE="input.txt"
+
+awk '
+NR < 5 {
+    print
+}
+NR >= 5 {
+    if ($0 ~ /welcome/)
+        gsub(/give/, "learning")
+    print
+}
+' "$INPUT_FILE" > tmp
+
+mv tmp "$INPUT_FILE"
 
 ubuntu@ip-172-31-9-63:~$ ls -lrt
 total 8
@@ -65,10 +78,10 @@ We always give our best effort.
 They give time to the community.
 Please give your feedback below.
 Never hesitate to give help when needed.
-welcome to the course, we learning you everything to start.
+welcome to the course, we give you everything to start.
 We should give credit where it's due.
-welcome again! Let's learning this a try.
+welcome again! Let's give this a try.
 Always give more than you take.
-welcome! learning your best every day.
+welcome! give your best every day.
 Remember to give thanks.
 ubuntu@ip-172-31-9-63:~$ 
