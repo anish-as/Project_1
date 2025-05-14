@@ -1,3 +1,5 @@
+ubuntu@ip-172-31-9-63:~$ nano Script_1.sh
+
 #!/bin/bash
 
 STATUS_CODE=$(curl -s -o /dev/null -w "%{http_code}" https://www.guvi.in)
@@ -14,3 +16,59 @@ fi
 
 
 
+ubuntu@ip-172-31-9-63:~$ ls
+Script_1.sh
+ubuntu@ip-172-31-9-63:~$ chmod +x Script_1.sh
+ubuntu@ip-172-31-9-63:~$ ls -lrt
+total 4
+-rwxrwxr-x 1 ubuntu ubuntu 493 May 14 10:29 Script_1.sh
+ubuntu@ip-172-31-9-63:~$ ./Script_1.sh
+HTTP Status Code: 200
+Success: The request was successful.
+ubuntu@ip-172-31-9-63:~$ 
+
+
+
+----------------------------------------------------------------
+
+
+ubuntu@ip-172-31-9-63:~$ nano Script_2.sh
+ubuntu@ip-172-31-9-63:~$ ls -lrt
+total 8
+-rwxrwxr-x 1 ubuntu ubuntu 493 May 14 10:29 Script_1.sh
+-rw-rw-r-- 1 ubuntu ubuntu 214 May 14 10:34 Script_2.sh
+ubuntu@ip-172-31-9-63:~$ chmod +x Script_2.sh
+
+#!/bin/bash
+
+awk 'NR<5 {print} NR>=5 {if ($0 ~ /welcome/) gsub(/give/, "learning"); print}' input.txt > tmp && mv tmp input.txt
+
+ubuntu@ip-172-31-9-63:~$ ls -lrt
+total 8
+-rwxrwxr-x 1 ubuntu ubuntu 493 May 14 10:29 Script_1.sh
+-rwxrwxr-x 1 ubuntu ubuntu 214 May 14 10:34 Script_2.sh
+ubuntu@ip-172-31-9-63:~$ nano input.txt
+ubuntu@ip-172-31-9-63:~$ cat input.txt
+We always give our best effort.
+They give time to the community.
+Please give your feedback below.
+Never hesitate to give help when needed.
+welcome to the course, we give you everything to start.
+We should give credit where it's due.
+welcome again! Let's give this a try.
+Always give more than you take.
+welcome! give your best every day.
+Remember to give thanks.
+ubuntu@ip-172-31-9-63:~$ ./Script_2.sh
+ubuntu@ip-172-31-9-63:~$ cat input.txt
+We always give our best effort.
+They give time to the community.
+Please give your feedback below.
+Never hesitate to give help when needed.
+welcome to the course, we learning you everything to start.
+We should give credit where it's due.
+welcome again! Let's learning this a try.
+Always give more than you take.
+welcome! learning your best every day.
+Remember to give thanks.
+ubuntu@ip-172-31-9-63:~$ 
